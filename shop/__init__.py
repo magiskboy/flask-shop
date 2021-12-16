@@ -1,4 +1,5 @@
-from flask import Flask, Response
+from flask import Flask
+from flask.wrappers import Response
 from .models import db, migrate
 from .auth import login_manager
 from .config import get_config

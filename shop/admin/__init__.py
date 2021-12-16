@@ -1,10 +1,9 @@
 from flask import Blueprint, render_template, url_for, redirect, request
 from flask_login import login_required, login_user, logout_user
-from shop.auth import login_manager
 from .forms import LoginForm
 
 
-bp = Blueprint('admin', __name__, template_folder='templates')
+bp = Blueprint('admin', __name__, template_folder='templates', static_folder='static')
 
 
 @bp.route('/')
